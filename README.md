@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Matriz RACI — Gobierno de TI · Power Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Visualizador interactivo de la Matriz RACI para la adopción de **Microsoft Power Platform** en el marco de gobierno de TI.
+Cubre las áreas de la Gerencia de TI, los componentes de la plataforma y las actividades clave bajo las metodologías **SAFe + DevSecOps**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Requisitos previos
 
-### `npm start`
+Asegúrate de tener instalado en tu máquina:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Node.js](https://nodejs.org/) versión 18 o superior
+- npm (viene incluido con Node.js)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para verificar:
 
-### `npm test`
+```bash
+node -v
+npm -v
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Cómo correr el proyecto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Abre la carpeta `raci-power-platform` en la terminal de VSCode (**Terminal → New Terminal**) y ejecuta:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# 1. Instalar dependencias (solo la primera vez)
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 2. Iniciar la aplicación
+npm start
+```
 
-### `npm run eject`
+La app se abrirá automáticamente en tu navegador en [http://localhost:3000](http://localhost:3000).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Vistas disponibles
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+El switch en la esquina superior derecha permite alternar entre dos matrices:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Vista | Descripción | Actividades |
+|---|---|---|
+| **Matriz RACI General** | Actividades clave por componente PP, visión ejecutiva | ~31 |
+| **Matriz RACI Detallada** | Actividades específicas por componente PP, visión operativa | ~83 |
 
-## Learn More
+Ambas vistas comparten el mismo eje de categorías — los **componentes de Power Platform** — lo que permite navegar de lo general a lo detallado con coherencia:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`Power Platform Admin & CoE` · `Power Apps` · `Power Automate` · `Power BI` · `Power Pages` · `Dataverse` · `Copilot Studio` · `IA Builder & Copilot` · `ALM & DevSecOps`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Funcionalidades
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Función | Descripción |
+|---|---|
+| **Switch de vista** | Alterna entre Matriz General y Matriz Detallada |
+| **Filtro por componente PP** | Filtra actividades por componente (disponible en ambas vistas) |
+| **Exportar a Excel** | Descarga la vista activa como `.xlsx`; respeta el filtro aplicado |
+| **Highlight de área** | Pasa el cursor sobre una columna de área para resaltarla en toda la tabla |
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Estructura del proyecto
 
-### Making a Progressive Web App
+```
+src/
+├── App.js              # Shell: header, switch de vista e imports
+├── RACIGeneral.js      # Matriz General: datos + tabla + exportar
+└── RACIDetallada.js    # Matriz Detallada: datos + tabla + exportar
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Alineamiento con la documentación oficial de Microsoft
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Las actividades y la asignación de roles RACI están alineadas con el marco de adopción oficial de Power Platform publicado por Microsoft:
 
-### Deployment
+**Roles y responsabilidades de Power Platform**
+https://learn.microsoft.com/es-es/power-platform/guidance/adoption/roles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+| Área en la matriz | Rol equivalente según Microsoft |
+|---|---|
+| CIS – Arquitectura | Enterprise Architect · Power Platform Product Owner |
+| Desarrollo de Software | Professional Makers · DevOps Engineer |
+| Procesos Empresariales | Citizen Makers · Business Analysts · Change Management |
+| Inteligencia Artificial | AI Strategist · Ethics Lead (Responsible AI) |
+| Ciberseguridad | Information Security & Compliance Team |
+| CIS – Operaciones TI | Power Platform Administrators |
+| CIS – Infraestructura | Azure Services Administrator · M365 Administrator |
+| CIS – Mesa de Ayuda | IT Operations (Support) |
+| Soluciones TI (RTEs/Scrum/PO) | Solution Architects · PMO |
 
-### `npm run build` fails to minify
+Actividades incorporadas a partir de esta referencia: criterios PP vs desarrollo tradicional, gestión del cambio, onboarding de makers, administración de servicios Azure y M365, y evaluación ética de IA (Responsible AI).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Otras ULRS de referencia**
+https://asana.com/es/resources/raci-chart
+https://www.inesdi.com/blog/matriz-raci-como-definir-roles-en-la-gestion-de-proyectos-digitales-cp/
+
+
+---
+> Versión v1.0 — sujeta a validación en comité.
+
+
