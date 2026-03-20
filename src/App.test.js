@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from './App';
 
 test('muestra el título Matriz RACI', () => {
@@ -8,30 +8,12 @@ test('muestra el título Matriz RACI', () => {
 
 test('muestra el subtítulo del sector financiero', () => {
   render(<App />);
-  expect(screen.getByText(/Sector financiero/i)).toBeInTheDocument();
+  expect(screen.getAllByText(/Sector financiero/i).length).toBeGreaterThanOrEqual(1);
 });
 
-test('muestra los botones de navegación General y Detallada', () => {
+test('muestra directamente la matriz detallada sin toggle de vistas', () => {
   render(<App />);
-  expect(screen.getByText('Matriz RACI General')).toBeInTheDocument();
-  expect(screen.getByText('Matriz RACI Detallada')).toBeInTheDocument();
-});
-
-test('carga la vista General por defecto', () => {
-  render(<App />);
-  // En vista General aparece "Matriz RACI General v1.0"
-  expect(screen.getByText(/Matriz General v1\.0/i)).toBeInTheDocument();
-});
-
-test('cambia a la vista Detallada al hacer clic', () => {
-  render(<App />);
-  fireEvent.click(screen.getByText('Matriz RACI Detallada'));
-  expect(screen.getByText(/Matriz Detallada v1\.0/i)).toBeInTheDocument();
-});
-
-test('regresa a la vista General desde Detallada', () => {
-  render(<App />);
-  fireEvent.click(screen.getByText('Matriz RACI Detallada'));
-  fireEvent.click(screen.getByText('Matriz RACI General'));
-  expect(screen.getByText(/Matriz General v1\.0/i)).toBeInTheDocument();
+  expect(screen.getByRole('table')).toBeInTheDocument();
+  expect(screen.queryByText('Matriz RACI General')).not.toBeInTheDocument();
+  expect(screen.queryByText('Matriz RACI Detallada')).not.toBeInTheDocument();
 });

@@ -1,0 +1,12 @@
+[
+  { "id": "dev",   "label": "CIS",                              "short": "CIS" },
+  { "id": "ai",    "label": "Inteligencia Artificial",          "short": "IA" },
+  { "id": "rpa",   "label": "Automatización (RPA)",             "short": "RPA" },
+  { "id": "datos", "label": "Datos y Analítica",                "short": "D&A" },
+  { "id": "arq",   "label": "COE TI - Arquitectura",            "short": "COE-TI Arq" },
+  { "id": "ops",   "label": "COE TI - Operaciones",             "short": "COE-TI Ops" },
+  { "id": "mesa",  "label": "COE TI - Mesa de Ayuda",           "short": "COE-TI Mesa" },
+  { "id": "sec",   "label": "Ciberseguridad",                   "short": "CiberSec" },
+  { "id": "proc",  "label": "Procesos Empresariales",           "short": "Procesos" },
+  { "id": "sol",   "label": "Soluciones TI (RTEs/Scrum/PO)",   "short": "Soluc TI" }
+]
