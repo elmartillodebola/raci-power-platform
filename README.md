@@ -209,4 +209,4 @@ https://www.inesdi.com/blog/matriz-raci-como-definir-roles-en-la-gestion-de-proy
 
 ---
 
-> Versión v1.0 — sujeta a validación en comité.
+> Versión v2.0 — sujeta a validación en comité.
