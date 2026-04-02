@@ -3,504 +3,1428 @@
     "actividad": "Mantener actualizado el CoE Toolkit",
     "cat": "Power Platform Admin & CoE",
     "comp": "CoE / Admin Center",
-    "raci": { "dev": "R", "ai": "I", "rpa": "I", "datos": "I", "arq": "C", "ops": "A", "mesa": "I", "sec": "I", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "I",
+      "ops": "AR",
+      "mesa": "I",
+      "sec": "",
+      "proc": "",
+      "sol": ""
+    }
   },
   {
     "actividad": "Aprobar licencias premium (per user / per app)",
     "cat": "Power Platform Admin & CoE",
     "comp": "Admin Center / Licenciamiento",
-    "raci": { "dev": "C", "ai": "C", "rpa": "I", "datos": "C", "arq": "R", "ops": "A", "mesa": "I", "sec": "I", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "C",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "A",
+      "ops": "R",
+      "mesa": "I",
+      "sec": "",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Evaluar iniciativas en comité Power Platform vs desarrollo tradicional",
     "cat": "Power Platform Admin & CoE",
     "comp": "Gobierno General",
-    "raci": { "dev": "R", "ai": "C", "rpa": "C", "datos": "C", "arq": "C", "ops": "I", "mesa": "I", "sec": "I", "proc": "C", "sol": "A" }
+    "raci": {
+      "dev": "R",
+      "ai": "C",
+      "rpa": "R",
+      "datos": "C",
+      "arq": "C",
+      "ops": "",
+      "mesa": "",
+      "sec": "C",
+      "proc": "I",
+      "sol": "AR"
+    }
   },
   {
     "actividad": "Gestionar ambientes (Dev / Test / Prod)",
     "cat": "Power Platform Admin & CoE",
     "comp": "Admin Center / Entornos",
-    "raci": { "dev": "C", "ai": "I", "rpa": "I", "datos": "I", "arq": "C", "ops": "R", "mesa": "C", "sec": "C", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "C",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "",
+      "ops": "AR",
+      "mesa": "I",
+      "sec": "",
+      "proc": "",
+      "sol": ""
+    }
   },
   {
     "actividad": "Definir políticas DLP (Data Loss Prevention)",
     "cat": "Power Platform Admin & CoE",
     "comp": "Admin Center / DLP",
-    "raci": { "dev": "C", "ai": "I", "rpa": "I", "datos": "C", "arq": "C", "ops": "A", "mesa": "I", "sec": "R", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "I",
+      "ai": "I",
+      "rpa": "I",
+      "datos": "I",
+      "arq": "C",
+      "ops": "AR",
+      "mesa": "",
+      "sec": "C",
+      "proc": "",
+      "sol": ""
+    }
   },
   {
     "actividad": "Implementar y monitorear políticas DLP",
     "cat": "Power Platform Admin & CoE",
     "comp": "Admin Center / DLP",
-    "raci": { "dev": "I", "ai": "I", "rpa": "I", "datos": "I", "arq": "C", "ops": "R", "mesa": "I", "sec": "A", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "I",
+      "ai": "I",
+      "rpa": "I",
+      "datos": "I",
+      "arq": "I",
+      "ops": "AR",
+      "mesa": "I",
+      "sec": "I",
+      "proc": "",
+      "sol": "I"
+    }
   },
   {
     "actividad": "Aprobar conectores premium y conectores externos",
     "cat": "Power Platform Admin & CoE",
     "comp": "Admin Center / Conectores",
-    "raci": { "dev": "C", "ai": "I", "rpa": "C", "datos": "C", "arq": "R", "ops": "A", "mesa": "I", "sec": "C", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "C",
+      "ai": "C",
+      "rpa": "C",
+      "datos": "C",
+      "arq": "A",
+      "ops": "R",
+      "mesa": "I",
+      "sec": "C",
+      "proc": "",
+      "sol": "R"
+    }
   },
   {
     "actividad": "Gestionar grupos de seguridad de entornos (AAD / Entra)",
     "cat": "Power Platform Admin & CoE",
     "comp": "Admin Center / Seguridad",
-    "raci": { "dev": "I", "ai": "I", "rpa": "I", "datos": "I", "arq": "C", "ops": "R", "mesa": "C", "sec": "A", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "R",
+      "mesa": "I",
+      "sec": "A",
+      "proc": "",
+      "sol": ""
+    }
   },
   {
     "actividad": "Auditar actividad y uso de plataforma (CoE Kit / SIEM)",
     "cat": "Power Platform Admin & CoE",
     "comp": "CoE / Monitoreo",
-    "raci": { "dev": "C", "ai": "I", "rpa": "I", "datos": "C", "arq": "C", "ops": "R", "mesa": "I", "sec": "A", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "C",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "",
+      "ops": "I",
+      "mesa": "",
+      "sec": "AR",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Gestionar solicitudes de nuevos entornos",
     "cat": "Power Platform Admin & CoE",
     "comp": "Admin Center / Entornos",
-    "raci": { "dev": "C", "ai": "I", "rpa": "I", "datos": "I", "arq": "C", "ops": "A", "mesa": "R", "sec": "C", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "C",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "AR",
+      "mesa": "I",
+      "sec": "C",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Configurar alertas y monitoreo proactivo de plataforma",
     "cat": "Power Platform Admin & CoE",
     "comp": "CoE / Monitoreo",
-    "raci": { "dev": "I", "ai": "I", "rpa": "I", "datos": "I", "arq": "A", "ops": "R", "mesa": "C", "sec": "C", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "AR",
+      "mesa": "I",
+      "sec": "I",
+      "proc": "",
+      "sol": ""
+    }
   },
   {
     "actividad": "Gestionar política de uso de Copilot a nivel tenant",
     "cat": "Power Platform Admin & CoE",
     "comp": "Admin Center / Copilot",
-    "raci": { "dev": "C", "ai": "R", "rpa": "I", "datos": "I", "arq": "A", "ops": "C", "mesa": "I", "sec": "C", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "I",
+      "ai": "AR",
+      "rpa": "",
+      "datos": "",
+      "arq": "I",
+      "ops": "R",
+      "mesa": "I",
+      "sec": "I",
+      "proc": "",
+      "sol": "I"
+    }
   },
   {
     "actividad": "Gestionar gobierno de datos de SharePoint en Power Platform",
     "cat": "Power Platform Admin & CoE",
     "comp": "Gobierno General",
-    "raci": { "dev": "C", "ai": "I", "rpa": "I", "datos": "R", "arq": "A", "ops": "C", "mesa": "I", "sec": "C", "proc": "C", "sol": "I" }
+    "raci": {
+      "dev": "I",
+      "ai": "",
+      "rpa": "",
+      "datos": "AR",
+      "arq": "A",
+      "ops": "C",
+      "mesa": "I",
+      "sec": "C",
+      "proc": "",
+      "sol": "I"
+    }
   },
   {
     "actividad": "Gestión del cambio y plan de comunicación para adopción",
     "cat": "Power Platform Admin & CoE",
     "comp": "Habilitación",
-    "raci": { "dev": "C", "ai": "I", "rpa": "I", "datos": "I", "arq": "I", "ops": "I", "mesa": "C", "sec": "I", "proc": "R", "sol": "A" }
+    "raci": {
+      "dev": "I",
+      "ai": "I",
+      "rpa": "I",
+      "datos": "I",
+      "arq": "C",
+      "ops": "AR",
+      "mesa": "I",
+      "sec": "C",
+      "proc": "I",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Proceso de onboarding de nuevos makers y equipos a la plataforma",
     "cat": "Power Platform Admin & CoE",
     "comp": "Habilitación",
-    "raci": { "dev": "R", "ai": "C", "rpa": "C", "datos": "I", "arq": "C", "ops": "I", "mesa": "C", "sec": "I", "proc": "C", "sol": "A" }
+    "raci": {
+      "dev": "AR",
+      "ai": "I",
+      "rpa": "I",
+      "datos": "I",
+      "arq": "I",
+      "ops": "I",
+      "mesa": "I",
+      "sec": "I",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Configurar servicios Azure de soporte (App Insights, Storage, Key Vault)",
     "cat": "Power Platform Admin & CoE",
     "comp": "Azure Services",
-    "raci": { "dev": "I", "ai": "I", "rpa": "I", "datos": "I", "arq": "A", "ops": "R", "mesa": "I", "sec": "C", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "AR",
+      "mesa": "",
+      "sec": "I",
+      "proc": "",
+      "sol": ""
+    }
   },
   {
     "actividad": "Gestionar asignación de licencias y usuarios en Microsoft 365",
     "cat": "Power Platform Admin & CoE",
     "comp": "M365 Admin",
-    "raci": { "dev": "I", "ai": "I", "rpa": "I", "datos": "C", "arq": "C", "ops": "R", "mesa": "C", "sec": "I", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "C",
+      "arq": "C",
+      "ops": "AR",
+      "mesa": "I",
+      "sec": "C",
+      "proc": "",
+      "sol": ""
+    }
   },
   {
     "actividad": "Definir estándares UI/UX para apps canvas",
     "cat": "Power Apps",
     "comp": "Canvas Apps",
-    "raci": { "dev": "R", "ai": "I", "rpa": "I", "datos": "I", "arq": "A", "ops": "I", "mesa": "I", "sec": "I", "proc": "C", "sol": "C" }
+    "raci": {
+      "dev": "C",
+      "ai": "I",
+      "rpa": "I",
+      "datos": "I",
+      "arq": "R",
+      "ops": "",
+      "mesa": "",
+      "sec": "",
+      "proc": "",
+      "sol": "A"
+    }
   },
   {
     "actividad": "Definir estándares UI/UX para apps model-driven",
     "cat": "Power Apps",
     "comp": "Model-Driven Apps",
-    "raci": { "dev": "R", "ai": "I", "rpa": "I", "datos": "C", "arq": "A", "ops": "I", "mesa": "I", "sec": "I", "proc": "C", "sol": "C" }
+    "raci": {
+      "dev": "C",
+      "ai": "I",
+      "rpa": "I",
+      "datos": "AR",
+      "arq": "R",
+      "ops": "",
+      "mesa": "",
+      "sec": "",
+      "proc": "",
+      "sol": "I"
+    }
   },
   {
     "actividad": "Desarrollar apps canvas (citizen developers)",
     "cat": "Power Apps",
     "comp": "Canvas Apps",
-    "raci": { "dev": "A", "ai": "I", "rpa": "I", "datos": "I", "arq": "C", "ops": "I", "mesa": "I", "sec": "C", "proc": "R", "sol": "C" }
+    "raci": {
+      "dev": "R",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "",
+      "mesa": "C",
+      "sec": "C",
+      "proc": "I",
+      "sol": "AR"
+    }
   },
   {
     "actividad": "Desarrollar apps canvas (desarrolladores profesionales)",
     "cat": "Power Apps",
     "comp": "Canvas Apps",
-    "raci": { "dev": "R", "ai": "I", "rpa": "I", "datos": "C", "arq": "C", "ops": "I", "mesa": "I", "sec": "C", "proc": "C", "sol": "A" }
+    "raci": {
+      "dev": "R",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "",
+      "mesa": "C",
+      "sec": "C",
+      "proc": "I",
+      "sol": "AR"
+    }
   },
   {
     "actividad": "Desarrollar apps model-driven",
     "cat": "Power Apps",
     "comp": "Model-Driven Apps",
-    "raci": { "dev": "R", "ai": "I", "rpa": "I", "datos": "C", "arq": "C", "ops": "I", "mesa": "I", "sec": "C", "proc": "C", "sol": "A" }
+    "raci": {
+      "dev": "R",
+      "ai": "",
+      "rpa": "",
+      "datos": "R",
+      "arq": "C",
+      "ops": "",
+      "mesa": "C",
+      "sec": "C",
+      "proc": "I",
+      "sol": "AR"
+    }
   },
   {
     "actividad": "Revisar código y componentes de apps (Pull Request / ALM)",
     "cat": "Power Apps",
     "comp": "Canvas Apps / Model-Driven",
-    "raci": { "dev": "R", "ai": "I", "rpa": "I", "datos": "I", "arq": "A", "ops": "C", "mesa": "I", "sec": "C", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "AR",
+      "ai": "I",
+      "rpa": "I",
+      "datos": "R",
+      "arq": "C",
+      "ops": "",
+      "mesa": "",
+      "sec": "C",
+      "proc": "",
+      "sol": "R"
+    }
   },
   {
     "actividad": "Gestionar ciclo de vida de apps (pipelines ALM)",
     "cat": "Power Apps",
     "comp": "ALM / Pipelines",
-    "raci": { "dev": "A", "ai": "I", "rpa": "I", "datos": "I", "arq": "C", "ops": "R", "mesa": "I", "sec": "I", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "C",
+      "ai": "C",
+      "rpa": "C",
+      "datos": "C",
+      "arq": "R",
+      "ops": "R",
+      "mesa": "I",
+      "sec": "I",
+      "proc": "I",
+      "sol": "A"
+    }
   },
   {
     "actividad": "Aprobar publicación de apps a producción",
     "cat": "Power Apps",
     "comp": "ALM / Pipelines",
-    "raci": { "dev": "C", "ai": "I", "rpa": "I", "datos": "I", "arq": "C", "ops": "A", "mesa": "I", "sec": "C", "proc": "C", "sol": "R" }
+    "raci": {
+      "dev": "I",
+      "ai": "I",
+      "rpa": "I",
+      "datos": "I",
+      "arq": "I",
+      "ops": "I",
+      "mesa": "I",
+      "sec": "C",
+      "proc": "C",
+      "sol": "AR"
+    }
   },
   {
     "actividad": "Soporte L1 / L2 a usuarios de apps",
     "cat": "Power Apps",
     "comp": "Soporte",
-    "raci": { "dev": "C", "ai": "I", "rpa": "I", "datos": "I", "arq": "I", "ops": "C", "mesa": "R", "sec": "I", "proc": "C", "sol": "A" }
+    "raci": {
+      "dev": "C",
+      "ai": "C",
+      "rpa": "C",
+      "datos": "C",
+      "arq": "C",
+      "ops": "AR",
+      "mesa": "R",
+      "sec": "C",
+      "proc": "",
+      "sol": "A"
+    }
   },
   {
     "actividad": "Capacitar ciudadanos dev en Power Apps",
     "cat": "Power Apps",
     "comp": "Habilitación",
-    "raci": { "dev": "R", "ai": "I", "rpa": "I", "datos": "I", "arq": "C", "ops": "I", "mesa": "C", "sec": "I", "proc": "C", "sol": "A" }
+    "raci": {
+      "dev": "AR",
+      "ai": "I",
+      "rpa": "I",
+      "datos": "I",
+      "arq": "I",
+      "ops": "I",
+      "mesa": "I",
+      "sec": "I",
+      "proc": "I",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Integrar apps con sistemas core (CBS, CRM, ESB)",
     "cat": "Power Apps",
     "comp": "Canvas Apps / Model-Driven",
-    "raci": { "dev": "R", "ai": "I", "rpa": "I", "datos": "C", "arq": "A", "ops": "C", "mesa": "I", "sec": "C", "proc": "C", "sol": "C" }
+    "raci": {
+      "dev": "R",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "A",
+      "ops": "C",
+      "mesa": "I",
+      "sec": "C",
+      "proc": "I",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Definir estándares para flujos cloud vs flujos desktop (RPA)",
     "cat": "Power Automate",
     "comp": "Cloud Flows / Desktop Flows",
-    "raci": { "dev": "R", "ai": "I", "rpa": "A", "datos": "I", "arq": "C", "ops": "C", "mesa": "I", "sec": "I", "proc": "C", "sol": "C" }
+    "raci": {
+      "dev": "I",
+      "ai": "I",
+      "rpa": "AR",
+      "datos": "I",
+      "arq": "C",
+      "ops": "I",
+      "mesa": "",
+      "sec": "C",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Aprobar flujos con conectores premium o externos",
     "cat": "Power Automate",
     "comp": "Cloud Flows / Conectores",
-    "raci": { "dev": "C", "ai": "I", "rpa": "C", "datos": "C", "arq": "R", "ops": "A", "mesa": "I", "sec": "C", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "I",
+      "ai": "I",
+      "rpa": "I",
+      "datos": "C",
+      "arq": "AR",
+      "ops": "C",
+      "mesa": "",
+      "sec": "C",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Desarrollar flujos de automatización de negocio (citizen dev)",
     "cat": "Power Automate",
     "comp": "Cloud Flows",
-    "raci": { "dev": "A", "ai": "I", "rpa": "C", "datos": "I", "arq": "C", "ops": "I", "mesa": "I", "sec": "C", "proc": "R", "sol": "C" }
+    "raci": {
+      "dev": "R",
+      "ai": "",
+      "rpa": "",
+      "datos": "C",
+      "arq": "C",
+      "ops": "",
+      "mesa": "C",
+      "sec": "C",
+      "proc": "I",
+      "sol": "AR"
+    }
   },
   {
     "actividad": "Desarrollar flujos de automatización empresarial complejos",
     "cat": "Power Automate",
     "comp": "Cloud Flows / Business Process Flows",
-    "raci": { "dev": "R", "ai": "C", "rpa": "C", "datos": "C", "arq": "C", "ops": "I", "mesa": "I", "sec": "C", "proc": "C", "sol": "A" }
+    "raci": {
+      "dev": "R",
+      "ai": "",
+      "rpa": "",
+      "datos": "C",
+      "arq": "C",
+      "ops": "",
+      "mesa": "C",
+      "sec": "C",
+      "proc": "I",
+      "sol": "AR"
+    }
   },
   {
     "actividad": "Desarrollar flujos de automatización robótica (Desktop / RPA)",
     "cat": "Power Automate",
     "comp": "Desktop Flows / RPA",
-    "raci": { "dev": "C", "ai": "I", "rpa": "R", "datos": "I", "arq": "C", "ops": "I", "mesa": "I", "sec": "C", "proc": "A", "sol": "C" }
+    "raci": {
+      "dev": "R",
+      "ai": "",
+      "rpa": "R",
+      "datos": "C",
+      "arq": "C",
+      "ops": "",
+      "mesa": "C",
+      "sec": "C",
+      "proc": "I",
+      "sol": "AR"
+    }
   },
   {
     "actividad": "Definir acuerdos de cobertura entre Power Automate y herramientas RPA propias",
     "cat": "Power Automate",
     "comp": "Cloud Flows / Desktop Flows",
-    "raci": { "dev": "R", "ai": "I", "rpa": "A", "datos": "I", "arq": "C", "ops": "I", "mesa": "I", "sec": "I", "proc": "C", "sol": "C" }
+    "raci": {
+      "dev": "C",
+      "ai": "",
+      "rpa": "AR",
+      "datos": "C",
+      "arq": "C",
+      "ops": "",
+      "mesa": "",
+      "sec": "C",
+      "proc": "I",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Gestionar ciclo de vida de flujos (ALM / Soluciones)",
     "cat": "Power Automate",
     "comp": "ALM / Soluciones",
-    "raci": { "dev": "A", "ai": "I", "rpa": "C", "datos": "I", "arq": "C", "ops": "R", "mesa": "I", "sec": "I", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "I",
+      "ai": "I",
+      "rpa": "I",
+      "datos": "I",
+      "arq": "C",
+      "ops": "AR",
+      "mesa": "I",
+      "sec": "I",
+      "proc": "I",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Monitorear ejecución y errores de flujos en producción",
     "cat": "Power Automate",
     "comp": "CoE / Monitoreo",
-    "raci": { "dev": "C", "ai": "I", "rpa": "A", "datos": "I", "arq": "I", "ops": "R", "mesa": "C", "sec": "I", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "AR",
+      "mesa": "I",
+      "sec": "I",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Gestionar credenciales y conexiones compartidas de flujos",
     "cat": "Power Automate",
     "comp": "Cloud Flows / Seguridad",
-    "raci": { "dev": "C", "ai": "I", "rpa": "C", "datos": "C", "arq": "C", "ops": "R", "mesa": "I", "sec": "A", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "",
+      "ai": "C",
+      "rpa": "C",
+      "datos": "C",
+      "arq": "C",
+      "ops": "AR",
+      "mesa": "",
+      "sec": "I",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Integrar flujos con sistemas externos (SAP, CBS, APIs REST)",
     "cat": "Power Automate",
     "comp": "Cloud Flows / Conectores",
-    "raci": { "dev": "R", "ai": "I", "rpa": "C", "datos": "C", "arq": "A", "ops": "C", "mesa": "I", "sec": "C", "proc": "C", "sol": "C" }
+    "raci": {
+      "dev": "R",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "AR",
+      "ops": "R",
+      "mesa": "I",
+      "sec": "C",
+      "proc": "I",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Definir modelo de datos y métricas corporativas (KPIs)",
     "cat": "Power BI",
     "comp": "Semantic Model / KPIs",
-    "raci": { "dev": "I", "ai": "C", "rpa": "I", "datos": "R", "arq": "A", "ops": "I", "mesa": "I", "sec": "I", "proc": "C", "sol": "C" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "AR",
+      "arq": "I",
+      "ops": "",
+      "mesa": "",
+      "sec": "",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Desarrollar modelos semánticos (datasets / semantic models)",
     "cat": "Power BI",
     "comp": "Semantic Model",
-    "raci": { "dev": "C", "ai": "C", "rpa": "I", "datos": "R", "arq": "C", "ops": "I", "mesa": "I", "sec": "I", "proc": "C", "sol": "A" }
+    "raci": {
+      "dev": "R",
+      "ai": "",
+      "rpa": "",
+      "datos": "AR",
+      "arq": "C",
+      "ops": "I",
+      "mesa": "",
+      "sec": "I",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Desarrollar reportes y dashboards de negocio",
     "cat": "Power BI",
     "comp": "Reports / Dashboards",
-    "raci": { "dev": "I", "ai": "C", "rpa": "I", "datos": "R", "arq": "C", "ops": "I", "mesa": "I", "sec": "I", "proc": "C", "sol": "A" }
+    "raci": {
+      "dev": "R",
+      "ai": "",
+      "rpa": "",
+      "datos": "AR",
+      "arq": "C",
+      "ops": "I",
+      "mesa": "",
+      "sec": "I",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Aprobar publicación de reportes al workspace corporativo",
     "cat": "Power BI",
     "comp": "Power BI Service / Workspaces",
-    "raci": { "dev": "I", "ai": "I", "rpa": "I", "datos": "A", "arq": "C", "ops": "R", "mesa": "I", "sec": "C", "proc": "C", "sol": "C" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "AR",
+      "arq": "C",
+      "ops": "I",
+      "mesa": "",
+      "sec": "C",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Gestionar workspaces y permisos en Power BI Service",
     "cat": "Power BI",
     "comp": "Power BI Service / Workspaces",
-    "raci": { "dev": "I", "ai": "I", "rpa": "I", "datos": "A", "arq": "C", "ops": "R", "mesa": "C", "sec": "C", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "AR",
+      "arq": "C",
+      "ops": "R",
+      "mesa": "",
+      "sec": "C",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Integrar Power BI con Dataverse / Azure Data Lake",
     "cat": "Power BI",
     "comp": "Semantic Model / Conectores",
-    "raci": { "dev": "C", "ai": "C", "rpa": "I", "datos": "R", "arq": "A", "ops": "C", "mesa": "I", "sec": "C", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "R",
+      "ai": "",
+      "rpa": "",
+      "datos": "AR",
+      "arq": "C",
+      "ops": "I",
+      "mesa": "",
+      "sec": "C",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Configurar Row Level Security (RLS) en modelos",
     "cat": "Power BI",
     "comp": "Semantic Model / Seguridad",
-    "raci": { "dev": "I", "ai": "I", "rpa": "I", "datos": "R", "arq": "C", "ops": "C", "mesa": "I", "sec": "A", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "AR",
+      "arq": "C",
+      "ops": "I",
+      "mesa": "",
+      "sec": "I",
+      "proc": "",
+      "sol": ""
+    }
   },
   {
     "actividad": "Monitorear capacidad Power BI Premium / Fabric",
     "cat": "Power BI",
     "comp": "Power BI Service / Capacidad",
-    "raci": { "dev": "I", "ai": "I", "rpa": "I", "datos": "A", "arq": "C", "ops": "R", "mesa": "I", "sec": "I", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "AR",
+      "arq": "C",
+      "ops": "I",
+      "mesa": "",
+      "sec": "I",
+      "proc": "",
+      "sol": ""
+    }
   },
   {
     "actividad": "Capacitar a usuarios en consumo de reportes Power BI",
     "cat": "Power BI",
     "comp": "Habilitación",
-    "raci": { "dev": "I", "ai": "I", "rpa": "I", "datos": "R", "arq": "I", "ops": "I", "mesa": "C", "sec": "I", "proc": "A", "sol": "C" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "AR",
+      "arq": "C",
+      "ops": "I",
+      "mesa": "",
+      "sec": "",
+      "proc": "",
+      "sol": "I"
+    }
   },
   {
     "actividad": "Definir arquitectura de portales externos",
     "cat": "Power Pages",
     "comp": "Portales / Arquitectura",
-    "raci": { "dev": "A", "ai": "I", "rpa": "I", "datos": "C", "arq": "R", "ops": "C", "mesa": "I", "sec": "C", "proc": "C", "sol": "C" }
+    "raci": {
+      "dev": "C",
+      "ai": "C",
+      "rpa": "C",
+      "datos": "C",
+      "arq": "AR",
+      "ops": "I",
+      "mesa": "",
+      "sec": "C",
+      "proc": "C",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Desarrollar portales y experiencias web externas",
     "cat": "Power Pages",
     "comp": "Portales / Desarrollo",
-    "raci": { "dev": "R", "ai": "I", "rpa": "I", "datos": "C", "arq": "C", "ops": "I", "mesa": "I", "sec": "C", "proc": "C", "sol": "A" }
+    "raci": {
+      "dev": "R",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "A",
+      "ops": "I",
+      "mesa": "",
+      "sec": "C",
+      "proc": "I",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Aprobar publicación de portales a producción",
     "cat": "Power Pages",
     "comp": "ALM / Despliegue",
-    "raci": { "dev": "C", "ai": "I", "rpa": "I", "datos": "I", "arq": "C", "ops": "A", "mesa": "I", "sec": "C", "proc": "C", "sol": "R" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "AR",
+      "ops": "R",
+      "mesa": "",
+      "sec": "C",
+      "proc": "I",
+      "sol": "R"
+    }
   },
   {
     "actividad": "Gestionar autenticación de usuarios externos (B2C / Entra ID)",
     "cat": "Power Pages",
     "comp": "Portales / Seguridad",
-    "raci": { "dev": "C", "ai": "I", "rpa": "I", "datos": "I", "arq": "C", "ops": "R", "mesa": "I", "sec": "A", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "R",
+      "mesa": "",
+      "sec": "A",
+      "proc": "",
+      "sol": "I"
+    }
   },
   {
     "actividad": "Definir políticas de seguridad web (OWASP, WAF, CSP)",
     "cat": "Power Pages",
     "comp": "Portales / Seguridad",
-    "raci": { "dev": "C", "ai": "I", "rpa": "I", "datos": "I", "arq": "A", "ops": "C", "mesa": "I", "sec": "R", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "R",
+      "mesa": "",
+      "sec": "AR",
+      "proc": "",
+      "sol": "I"
+    }
   },
   {
     "actividad": "Monitorear disponibilidad y rendimiento del portal",
     "cat": "Power Pages",
     "comp": "Portales / Operaciones",
-    "raci": { "dev": "C", "ai": "I", "rpa": "I", "datos": "I", "arq": "C", "ops": "R", "mesa": "C", "sec": "C", "proc": "I", "sol": "A" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "AR",
+      "mesa": "I",
+      "sec": "I",
+      "proc": "I",
+      "sol": "I"
+    }
   },
   {
     "actividad": "Diseñar modelo de datos corporativo en Dataverse",
     "cat": "Dataverse",
     "comp": "Modelo de datos",
-    "raci": { "dev": "C", "ai": "C", "rpa": "I", "datos": "R", "arq": "A", "ops": "I", "mesa": "I", "sec": "C", "proc": "C", "sol": "C" }
+    "raci": {
+      "dev": "I",
+      "ai": "I",
+      "rpa": "I",
+      "datos": "AR",
+      "arq": "A",
+      "ops": "I",
+      "mesa": "",
+      "sec": "C",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Aprobar cambios al esquema de datos en producción",
     "cat": "Dataverse",
     "comp": "Modelo de datos / ALM",
-    "raci": { "dev": "C", "ai": "I", "rpa": "I", "datos": "A", "arq": "R", "ops": "C", "mesa": "I", "sec": "C", "proc": "C", "sol": "C" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "A",
+      "arq": "R",
+      "ops": "C",
+      "mesa": "I",
+      "sec": "C",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Gestionar tablas, columnas y relaciones en Dataverse",
     "cat": "Dataverse",
     "comp": "Modelo de datos",
-    "raci": { "dev": "R", "ai": "I", "rpa": "I", "datos": "A", "arq": "C", "ops": "I", "mesa": "I", "sec": "I", "proc": "C", "sol": "C" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "A",
+      "arq": "C",
+      "ops": "I",
+      "mesa": "",
+      "sec": "I",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Configurar roles de seguridad y permisos en Dataverse",
     "cat": "Dataverse",
     "comp": "Seguridad",
-    "raci": { "dev": "C", "ai": "I", "rpa": "I", "datos": "C", "arq": "C", "ops": "R", "mesa": "I", "sec": "A", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "A",
+      "arq": "C",
+      "ops": "R",
+      "mesa": "",
+      "sec": "C",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Gestionar retención y ciclo de vida de datos",
     "cat": "Dataverse",
     "comp": "Gobierno de datos",
-    "raci": { "dev": "I", "ai": "I", "rpa": "I", "datos": "R", "arq": "C", "ops": "C", "mesa": "I", "sec": "A", "proc": "C", "sol": "I" }
+    "raci": {
+      "dev": "I",
+      "ai": "",
+      "rpa": "",
+      "datos": "AR",
+      "arq": "C",
+      "ops": "C",
+      "mesa": "",
+      "sec": "A",
+      "proc": "",
+      "sol": "I"
+    }
   },
   {
     "actividad": "Integrar Dataverse con sistemas core (CBS, CRM, ESB)",
     "cat": "Dataverse",
     "comp": "Integración",
-    "raci": { "dev": "R", "ai": "I", "rpa": "I", "datos": "C", "arq": "A", "ops": "C", "mesa": "I", "sec": "C", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "I",
+      "ai": "",
+      "rpa": "",
+      "datos": "A",
+      "arq": "R",
+      "ops": "C",
+      "mesa": "",
+      "sec": "I",
+      "proc": "I",
+      "sol": "I"
+    }
   },
   {
     "actividad": "Monitorear rendimiento y almacenamiento de Dataverse",
     "cat": "Dataverse",
     "comp": "Operaciones",
-    "raci": { "dev": "I", "ai": "I", "rpa": "I", "datos": "A", "arq": "C", "ops": "R", "mesa": "I", "sec": "I", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "",
+      "ai": "",
+      "rpa": "I",
+      "datos": "R",
+      "arq": "C",
+      "ops": "R",
+      "mesa": "I",
+      "sec": "",
+      "proc": "",
+      "sol": "I"
+    }
   },
   {
     "actividad": "Gestionar soluciones y publishers en Dataverse (ALM)",
     "cat": "Dataverse",
     "comp": "ALM / Soluciones",
-    "raci": { "dev": "A", "ai": "I", "rpa": "I", "datos": "C", "arq": "C", "ops": "R", "mesa": "I", "sec": "I", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "C",
+      "ai": "",
+      "rpa": "I",
+      "datos": "R",
+      "arq": "C",
+      "ops": "AR",
+      "mesa": "I",
+      "sec": "I",
+      "proc": "I",
+      "sol": "I"
+    }
   },
   {
     "actividad": "Definir estrategia de agentes y bots conversacionales",
     "cat": "Copilot Studio",
     "comp": "Estrategia / Gobierno",
-    "raci": { "dev": "C", "ai": "R", "rpa": "I", "datos": "C", "arq": "A", "ops": "I", "mesa": "C", "sec": "C", "proc": "C", "sol": "C" }
+    "raci": {
+      "dev": "C",
+      "ai": "AR",
+      "rpa": "C",
+      "datos": "C",
+      "arq": "C",
+      "ops": "C",
+      "mesa": "I",
+      "sec": "C",
+      "proc": "C",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Autorizar uso de Copilot Studio (licencias y acceso)",
     "cat": "Copilot Studio",
     "comp": "Gobierno / Licenciamiento",
-    "raci": { "dev": "I", "ai": "R", "rpa": "I", "datos": "I", "arq": "C", "ops": "A", "mesa": "I", "sec": "C", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "",
+      "ai": "A",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "R",
+      "mesa": "I",
+      "sec": "",
+      "proc": "",
+      "sol": ""
+    }
   },
   {
     "actividad": "Diseñar flujos conversacionales y tópicos",
     "cat": "Copilot Studio",
     "comp": "Diseño de agentes",
-    "raci": { "dev": "C", "ai": "R", "rpa": "I", "datos": "I", "arq": "C", "ops": "I", "mesa": "C", "sec": "I", "proc": "C", "sol": "A" }
+    "raci": {
+      "dev": "R",
+      "ai": "AR",
+      "rpa": "C",
+      "datos": "",
+      "arq": "R",
+      "ops": "",
+      "mesa": "",
+      "sec": "C",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Desarrollar agentes y bots con Copilot Studio",
     "cat": "Copilot Studio",
     "comp": "Desarrollo de agentes",
-    "raci": { "dev": "C", "ai": "R", "rpa": "C", "datos": "C", "arq": "C", "ops": "I", "mesa": "C", "sec": "C", "proc": "C", "sol": "A" }
+    "raci": {
+      "dev": "R",
+      "ai": "AR",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "",
+      "mesa": "",
+      "sec": "C",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Integrar bots con canales (Teams, web, WhatsApp)",
     "cat": "Copilot Studio",
     "comp": "Canales / Integración",
-    "raci": { "dev": "R", "ai": "A", "rpa": "I", "datos": "I", "arq": "C", "ops": "C", "mesa": "C", "sec": "C", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "R",
+      "ai": "AR",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "I",
+      "mesa": "",
+      "sec": "C",
+      "proc": "I",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Integrar agentes con sistemas de backend (APIs, Dataverse)",
     "cat": "Copilot Studio",
     "comp": "Integración backend",
-    "raci": { "dev": "R", "ai": "A", "rpa": "I", "datos": "C", "arq": "C", "ops": "I", "mesa": "I", "sec": "C", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "R",
+      "ai": "AR",
+      "rpa": "",
+      "datos": "",
+      "arq": "R",
+      "ops": "I",
+      "mesa": "",
+      "sec": "C",
+      "proc": "I",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Conectar agentes con modelos IA generativa (Azure OpenAI)",
     "cat": "Copilot Studio",
     "comp": "IA Generativa / Azure OpenAI",
-    "raci": { "dev": "C", "ai": "R", "rpa": "I", "datos": "C", "arq": "A", "ops": "I", "mesa": "I", "sec": "C", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "R",
+      "ai": "AR",
+      "rpa": "",
+      "datos": "",
+      "arq": "R",
+      "ops": "I",
+      "mesa": "",
+      "sec": "C",
+      "proc": "I",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Gestionar knowledge bases para agentes (RAG / grounding)",
     "cat": "Copilot Studio",
     "comp": "IA Generativa / Knowledge",
-    "raci": { "dev": "C", "ai": "R", "rpa": "I", "datos": "A", "arq": "C", "ops": "I", "mesa": "I", "sec": "C", "proc": "C", "sol": "C" }
+    "raci": {
+      "dev": "",
+      "ai": "AR",
+      "rpa": "",
+      "datos": "",
+      "arq": "I",
+      "ops": "I",
+      "mesa": "",
+      "sec": "C",
+      "proc": "",
+      "sol": ""
+    }
   },
   {
     "actividad": "Monitorear métricas de conversaciones y escaladas",
     "cat": "Copilot Studio",
     "comp": "Monitoreo / Analytics",
-    "raci": { "dev": "I", "ai": "R", "rpa": "I", "datos": "C", "arq": "I", "ops": "A", "mesa": "C", "sec": "I", "proc": "C", "sol": "C" }
+    "raci": {
+      "dev": "",
+      "ai": "AR",
+      "rpa": "",
+      "datos": "",
+      "arq": "I",
+      "ops": "R",
+      "mesa": "I",
+      "sec": "I",
+      "proc": "I",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Definir estrategia de IA generativa en Power Platform",
     "cat": "IA Builder & Copilot",
     "comp": "Estrategia IA",
-    "raci": { "dev": "C", "ai": "R", "rpa": "I", "datos": "C", "arq": "A", "ops": "I", "mesa": "I", "sec": "C", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "C",
+      "ai": "AR",
+      "rpa": "C",
+      "datos": "C",
+      "arq": "C",
+      "ops": "C",
+      "mesa": "I",
+      "sec": "C",
+      "proc": "C",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Aprobar uso de AI Builder y modelos personalizados",
     "cat": "IA Builder & Copilot",
     "comp": "AI Builder / Gobierno",
-    "raci": { "dev": "C", "ai": "R", "rpa": "I", "datos": "C", "arq": "A", "ops": "C", "mesa": "I", "sec": "C", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "",
+      "ai": "R",
+      "rpa": "I",
+      "datos": "C",
+      "arq": "A",
+      "ops": "C",
+      "mesa": "I",
+      "sec": "C",
+      "proc": "I",
+      "sol": "I"
+    }
   },
   {
     "actividad": "Desarrollar modelos personalizados con AI Builder",
     "cat": "IA Builder & Copilot",
     "comp": "AI Builder / Modelos",
-    "raci": { "dev": "C", "ai": "R", "rpa": "I", "datos": "A", "arq": "C", "ops": "I", "mesa": "I", "sec": "C", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "R",
+      "ai": "R",
+      "rpa": "I",
+      "datos": "A",
+      "arq": "C",
+      "ops": "I",
+      "mesa": "I",
+      "sec": "C",
+      "proc": "I",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Integrar Copilot nativo en Power Apps (control Copilot)",
     "cat": "IA Builder & Copilot",
     "comp": "Copilot en Power Apps",
-    "raci": { "dev": "R", "ai": "A", "rpa": "I", "datos": "C", "arq": "C", "ops": "I", "mesa": "I", "sec": "C", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "R",
+      "ai": "A",
+      "rpa": "I",
+      "datos": "C",
+      "arq": "C",
+      "ops": "I",
+      "mesa": "I",
+      "sec": "C",
+      "proc": "I",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Revisar sesgos y calidad de modelos de IA",
     "cat": "IA Builder & Copilot",
     "comp": "Gobierno IA / Calidad",
-    "raci": { "dev": "I", "ai": "R", "rpa": "I", "datos": "A", "arq": "C", "ops": "I", "mesa": "I", "sec": "C", "proc": "C", "sol": "I" }
+    "raci": {
+      "dev": "I",
+      "ai": "R",
+      "rpa": "I",
+      "datos": "A",
+      "arq": "C",
+      "ops": "I",
+      "mesa": "I",
+      "sec": "C",
+      "proc": "C",
+      "sol": "I"
+    }
   },
   {
     "actividad": "Monitorear consumo de créditos AI Builder",
     "cat": "IA Builder & Copilot",
     "comp": "AI Builder / Capacidad",
-    "raci": { "dev": "I", "ai": "A", "rpa": "I", "datos": "I", "arq": "C", "ops": "R", "mesa": "I", "sec": "I", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "",
+      "ai": "A",
+      "rpa": "I",
+      "datos": "I",
+      "arq": "C",
+      "ops": "R",
+      "mesa": "I",
+      "sec": "I",
+      "proc": "I",
+      "sol": "I"
+    }
   },
   {
     "actividad": "Definir estándares de IA responsable (sesgo, transparencia, privacidad)",
     "cat": "IA Builder & Copilot",
     "comp": "Responsible AI / Gobierno",
-    "raci": { "dev": "I", "ai": "R", "rpa": "I", "datos": "A", "arq": "C", "ops": "I", "mesa": "I", "sec": "C", "proc": "C", "sol": "I" }
+    "raci": {
+      "dev": "C",
+      "ai": "AR",
+      "rpa": "C",
+      "datos": "C",
+      "arq": "C",
+      "ops": "C",
+      "mesa": "",
+      "sec": "C",
+      "proc": "C",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Evaluación ética y de riesgos de IA antes de producción",
     "cat": "IA Builder & Copilot",
     "comp": "Responsible AI / Gobierno",
-    "raci": { "dev": "I", "ai": "R", "rpa": "I", "datos": "C", "arq": "C", "ops": "I", "mesa": "I", "sec": "A", "proc": "C", "sol": "C" }
+    "raci": {
+      "dev": "C",
+      "ai": "AR",
+      "rpa": "C",
+      "datos": "C",
+      "arq": "C",
+      "ops": "C",
+      "mesa": "I",
+      "sec": "R",
+      "proc": "R",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Gestionar repositorios de soluciones (Azure DevOps / GitHub)",
     "cat": "ALM & DevSecOps",
     "comp": "Source Control",
-    "raci": { "dev": "A", "ai": "I", "rpa": "C", "datos": "I", "arq": "C", "ops": "R", "mesa": "I", "sec": "C", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "I",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "AR",
+      "mesa": "",
+      "sec": "C",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Configurar pipelines CI/CD para Power Platform",
     "cat": "ALM & DevSecOps",
     "comp": "CI/CD Pipelines",
-    "raci": { "dev": "A", "ai": "I", "rpa": "C", "datos": "I", "arq": "C", "ops": "R", "mesa": "I", "sec": "C", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "I",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "AR",
+      "mesa": "",
+      "sec": "C",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Ejecutar análisis de seguridad en código (SAST / DAST)",
     "cat": "ALM & DevSecOps",
     "comp": "DevSecOps / Seguridad",
-    "raci": { "dev": "C", "ai": "I", "rpa": "I", "datos": "I", "arq": "C", "ops": "A", "mesa": "I", "sec": "R", "proc": "I", "sol": "I" }
+    "raci": {
+      "dev": "R",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "I",
+      "ops": "AR",
+      "mesa": "",
+      "sec": "R",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Gestionar versionado y control de cambios de soluciones",
     "cat": "ALM & DevSecOps",
     "comp": "Source Control / ALM",
-    "raci": { "dev": "A", "ai": "I", "rpa": "C", "datos": "I", "arq": "C", "ops": "R", "mesa": "I", "sec": "I", "proc": "I", "sol": "C" }
+    "raci": {
+      "dev": "R",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "AR",
+      "mesa": "",
+      "sec": "I",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Ejecutar pruebas automatizadas (unit / integración / UAT)",
     "cat": "ALM & DevSecOps",
     "comp": "Testing",
-    "raci": { "dev": "C", "ai": "I", "rpa": "C", "datos": "I", "arq": "C", "ops": "R", "mesa": "I", "sec": "C", "proc": "C", "sol": "A" }
+    "raci": {
+      "dev": "R",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "I",
+      "ops": "AR",
+      "mesa": "",
+      "sec": "C",
+      "proc": "",
+      "sol": "C"
+    }
   },
   {
     "actividad": "Gestionar aprobaciones de despliegue a producción (CAB)",
     "cat": "ALM & DevSecOps",
     "comp": "Change Management / CAB",
-    "raci": { "dev": "C", "ai": "I", "rpa": "C", "datos": "I", "arq": "C", "ops": "A", "mesa": "I", "sec": "C", "proc": "I", "sol": "R" }
+    "raci": {
+      "dev": "R",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
+      "ops": "AR",
+      "mesa": "",
+      "sec": "C",
+      "proc": "I",
+      "sol": "C"
+    }
   }
 ]
