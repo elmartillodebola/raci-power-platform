@@ -64,7 +64,7 @@ Los componentes disponibles son:
 
 El botón **✎ Editar valores** activa el modo edición. En este modo:
 
-- Cada celda RACI es clicable y cicla entre los valores: `vacío → R → A → C → I → vacío`
+- Cada celda RACI es clicable y cicla entre los valores: `vacío → R → A → RA → C → I → vacío`
 - La tabla se enmarca en ámbar como indicador visual de que hay cambios pendientes
 - El botón **Cancelar** descarta todos los cambios sin modificar nada
 - El botón **✓ Guardar y descargar JSON** aplica los cambios en pantalla y descarga el archivo `raci-data.json` actualizado

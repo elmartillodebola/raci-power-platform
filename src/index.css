@@ -13,3 +13,38 @@
 }
 body { margin: 0; font-family: var(--font-sans); }
 
+/* ── RACI Legend Tooltip ─────────────────────────────────────────────────── */
+.raci-legend-item {
+  position: relative;
+}
+.raci-legend-item .raci-tooltip {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e293b;
+  color: #f1f5f9;
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 7px 10px;
+  border-radius: 6px;
+  width: 220px;
+  white-space: normal;
+  z-index: 100;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.raci-legend-item .raci-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #1e293b;
+}
+.raci-legend-item:hover .raci-tooltip {
+  display: block;
+}
+

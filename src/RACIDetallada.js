@@ -10,19 +10,20 @@ const RACI_COLORS = {
   A: { bg: "#FAEEDA", text: "#854F0B", border: "#BA7517" },
   C: { bg: "#E6F1FB", text: "#185FA5", border: "#378ADD" },
   I: { bg: "#F1EFE8", text: "#5F5E5A", border: "#B4B2A9" },
+  AR: { bg: "#FDE8E8", text: "#B22222", border: "#FF6347" },
   "": { bg: "transparent", text: "#B4B2A9", border: "transparent" },
   "·": { bg: "transparent", text: "#B4B2A9", border: "var(--color-border-secondary)" },
 };
 
 const LEGEND = [
-  { code: "R", label: "Responsible – Ejecuta" },
-  { code: "A", label: "Accountable – Rinde cuentas" },
-  { code: "C", label: "Consulted – Aporta criterio" },
-  { code: "I", label: "Informed – Debe ser notificado" },
-  { code: "·", label: "No aplica" },
+  { code: "R", label: "Responsible – Ejecuta", tooltip: "Quien ejecuta la tarea. Realiza el trabajo operativo. Puede haber más de un Responsible por actividad.", align: "right" },
+  { code: "A", label: "Accountable – Rinde cuentas", tooltip: "Quien rinde cuentas por el resultado final. Aprueba el entregable y responde ante la organización. Solo debe haber uno por actividad." },
+  { code: "C", label: "Consulted – Aporta criterio", tooltip: "Quien aporta criterio o conocimiento antes o durante la ejecución. Comunicación bidireccional: se le consulta y responde." },
+  { code: "I", label: "Informed – Debe ser notificado", tooltip: "Quien debe ser notificado del avance o resultado. Comunicación unidireccional: recibe información sin necesidad de responder." },
+  { code: "·", label: "No aplica", tooltip: "No aplica asignación RACI para esta área en esta actividad." },
 ];
 
-const RACI_CYCLE = ["", "R", "A", "C", "I"];
+const RACI_CYCLE = ["", "R", "A", "C", "I", "AR"];
 const CATEGORIES = [...new Set(RACI_DATA_RAW.map(r => r.cat))];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -35,6 +36,8 @@ export default function RACIMatrixDetallada() {
   const [editMode, setEditMode] = useState(false);
   const [editData, setEditData] = useState(null);
   const [showSaveNotice, setShowSaveNotice] = useState(false);
+  const [sortField, setSortField] = useState(null);
+  const [sortDir, setSortDir] = useState("asc");
 
   const allCats = ["Todas", ...CATEGORIES];
 
@@ -49,6 +52,37 @@ export default function RACIMatrixDetallada() {
     (filterCat === "Todas" || r.cat === filterCat) &&
     (filterComp === "Todas" || r.comp === filterComp)
   );
+
+  const handleSort = (field) => {
+    if (sortField === field) {
+      if (sortDir === "asc") setSortDir("desc");
+      else { setSortField(null); setSortDir("asc"); }
+    } else {
+      setSortField(field);
+      setSortDir("asc");
+    }
+  };
+
+  const sortedData = sortField
+    ? [...filteredData].sort((a, b) => {
+        const valA = (a[sortField] || "").toLowerCase();
+        const valB = (b[sortField] || "").toLowerCase();
+        const cmp = valA.localeCompare(valB, "es", { sensitivity: "base" });
+        return sortDir === "asc" ? cmp : -cmp;
+      })
+    : filteredData;
+
+  const sortIcon = (field) => {
+    if (sortField !== field) return " ⇅";
+    return sortDir === "asc" ? " ▲" : " ▼";
+  };
+
+  const sortHeaderStyle = (field) => ({
+    cursor: "pointer",
+    userSelect: "none",
+    color: sortField === field ? "var(--color-text-primary)" : "var(--color-text-secondary)",
+    background: sortField === field ? "var(--color-background-info)" : "var(--color-background-secondary)",
+  });
 
   const handleCatChange = (val) => {
     setFilterCat(val);
@@ -119,14 +153,16 @@ export default function RACIMatrixDetallada() {
       {/* Legend */}
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: "1rem" }}>
         {LEGEND.map(l => (
-          <div key={l.code} style={{
+          <div key={l.code} className="raci-legend-item" style={{
             display: "flex", alignItems: "center", gap: 6,
             background: RACI_COLORS[l.code].bg,
             border: `0.5px solid ${RACI_COLORS[l.code].border}`,
             borderRadius: 6, padding: "3px 10px", fontSize: 12,
+            cursor: "help",
           }}>
             <span style={{ fontWeight: 500, color: RACI_COLORS[l.code].text }}>{l.code}</span>
             <span style={{ color: "var(--color-text-secondary)" }}>{l.label}</span>
+            <span className="raci-tooltip">{l.tooltip}</span>
           </div>
         ))}
       </div>
@@ -164,7 +200,7 @@ export default function RACIMatrixDetallada() {
           color: "#92400E",
         }}>
           <span style={{ fontWeight: 600 }}>Modo edición activo</span>
-          <span style={{ color: "#B45309" }}>· Haz clic en cualquier celda para cambiar su valor (cicla entre R → A → C → I → vacío)</span>
+          <span style={{ color: "#B45309" }}>· Haz clic en cualquier celda para cambiar su valor (cicla entre R → A → RA → C → I → vacío)</span>
         </div>
       )}
 
@@ -247,9 +283,15 @@ export default function RACIMatrixDetallada() {
           </colgroup>
           <thead>
             <tr style={{ background: "var(--color-background-secondary)", borderBottom: "0.5px solid var(--color-border-secondary)" }}>
-              <th style={{ padding: "8px 6px", textAlign: "left", fontWeight: 500, color: "var(--color-text-secondary)", fontSize: 10 }}>Componente PP</th>
-              <th style={{ padding: "8px 6px", textAlign: "left", fontWeight: 500, color: "var(--color-text-secondary)", fontSize: 10 }}>Sub-área / Módulo</th>
-              <th style={{ padding: "8px 6px", textAlign: "left", fontWeight: 500, color: "var(--color-text-secondary)", fontSize: 10 }}>Actividad</th>
+              <th onClick={() => handleSort("cat")} style={{ padding: "8px 6px", textAlign: "left", fontWeight: 500, fontSize: 10, ...sortHeaderStyle("cat") }}>
+                Componente PP<span style={{ opacity: 0.6 }}>{sortIcon("cat")}</span>
+              </th>
+              <th onClick={() => handleSort("comp")} style={{ padding: "8px 6px", textAlign: "left", fontWeight: 500, fontSize: 10, ...sortHeaderStyle("comp") }}>
+                Sub-área / Módulo<span style={{ opacity: 0.6 }}>{sortIcon("comp")}</span>
+              </th>
+              <th onClick={() => handleSort("actividad")} style={{ padding: "8px 6px", textAlign: "left", fontWeight: 500, fontSize: 10, ...sortHeaderStyle("actividad") }}>
+                Actividad<span style={{ opacity: 0.6 }}>{sortIcon("actividad")}</span>
+              </th>
               {AREAS.map(a => (
                 <th key={a.id}
                   onMouseEnter={() => !editMode && setHighlight(a.id)}
@@ -269,25 +311,77 @@ export default function RACIMatrixDetallada() {
             </tr>
           </thead>
           <tbody>
-            {CATEGORIES.filter(cat => filterCat === "Todas" || cat === filterCat).map(cat => {
-              const rows = filteredData.filter(r => r.cat === cat);
-              if (!rows.length) return null;
-              return rows.map((r, i) => (
+            {(() => {
+              // When sorting by cat, recalculate rowSpans based on sorted order.
+              // When sorting by comp or actividad, render flat (no rowSpan) to avoid broken merged cells.
+              const useRowSpan = sortField !== "comp" && sortField !== "actividad";
+
+              if (useRowSpan) {
+                // Build groups preserving sorted order (sortField===null uses original order; sortField==="cat" sorts cats too)
+                const seen = [];
+                const groups = [];
+                sortedData.forEach(r => {
+                  if (!seen.includes(r.cat)) { seen.push(r.cat); groups.push({ cat: r.cat, rows: [] }); }
+                  groups.find(g => g.cat === r.cat).rows.push(r);
+                });
+                return groups.map(({ cat, rows }) =>
+                  rows.map((r, i) => (
+                    <tr key={r.actividad} style={{
+                      borderBottom: "0.5px solid var(--color-border-tertiary)",
+                      background: i % 2 === 0 ? "transparent" : "var(--color-background-secondary)",
+                    }}>
+                      {i === 0 ? (
+                        <td rowSpan={rows.length} style={{
+                          padding: "6px 6px", fontWeight: 500, fontSize: 10,
+                          color: "var(--color-text-secondary)", verticalAlign: "top",
+                          borderRight: "0.5px solid var(--color-border-secondary)",
+                          background: "var(--color-background-secondary)",
+                          lineHeight: 1.3,
+                        }}>
+                          {cat}
+                        </td>
+                      ) : null}
+                      <td style={{ padding: "6px 6px", fontSize: 10, color: "var(--color-text-secondary)", lineHeight: 1.2 }}>{r.comp}</td>
+                      <td style={{ padding: "6px 6px", lineHeight: 1.3, fontSize: 11 }}>{r.actividad}</td>
+                      {AREAS.map(a => {
+                        const code = r.raci[a.id] || "";
+                        const c = RACI_COLORS[code] || RACI_COLORS[""];
+                        return (
+                          <td key={a.id}
+                            onClick={() => editMode && cycleCell(r.actividad, a.id)}
+                            style={{
+                              textAlign: "center", padding: "4px 2px",
+                              borderLeft: "0.5px solid var(--color-border-tertiary)",
+                              background: highlight === a.id ? (code ? c.bg : "var(--color-background-info)") : (code ? c.bg : "transparent"),
+                              cursor: editMode ? "pointer" : "default",
+                              transition: "background 0.15s",
+                            }}
+                            title={editMode ? "Clic para cambiar valor" : undefined}
+                          >
+                            {code && <span style={{ display: "inline-block", fontWeight: 500, fontSize: 11, color: c.text }}>{code}</span>}
+                            {editMode && !code && <span style={{ display: "inline-block", fontSize: 10, color: "#D1D5DB" }}>·</span>}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  ))
+                );
+              }
+
+              // Flat rendering (sort by comp or actividad): show cat value in every row
+              return sortedData.map((r, i) => (
                 <tr key={r.actividad} style={{
                   borderBottom: "0.5px solid var(--color-border-tertiary)",
                   background: i % 2 === 0 ? "transparent" : "var(--color-background-secondary)",
                 }}>
-                  {i === 0 ? (
-                    <td rowSpan={rows.length} style={{
-                      padding: "6px 6px", fontWeight: 500, fontSize: 10,
-                      color: "var(--color-text-secondary)", verticalAlign: "top",
-                      borderRight: "0.5px solid var(--color-border-secondary)",
-                      background: "var(--color-background-secondary)",
-                      lineHeight: 1.3,
-                    }}>
-                      {cat}
-                    </td>
-                  ) : null}
+                  <td style={{
+                    padding: "6px 6px", fontWeight: 500, fontSize: 10,
+                    color: "var(--color-text-secondary)", lineHeight: 1.3,
+                    borderRight: "0.5px solid var(--color-border-secondary)",
+                    background: "var(--color-background-secondary)",
+                  }}>
+                    {r.cat}
+                  </td>
                   <td style={{ padding: "6px 6px", fontSize: 10, color: "var(--color-text-secondary)", lineHeight: 1.2 }}>{r.comp}</td>
                   <td style={{ padding: "6px 6px", lineHeight: 1.3, fontSize: 11 }}>{r.actividad}</td>
                   {AREAS.map(a => {
@@ -299,29 +393,20 @@ export default function RACIMatrixDetallada() {
                         style={{
                           textAlign: "center", padding: "4px 2px",
                           borderLeft: "0.5px solid var(--color-border-tertiary)",
-                          background: highlight === a.id
-                            ? (code ? c.bg : "var(--color-background-info)")
-                            : (code ? c.bg : "transparent"),
+                          background: highlight === a.id ? (code ? c.bg : "var(--color-background-info)") : (code ? c.bg : "transparent"),
                           cursor: editMode ? "pointer" : "default",
                           transition: "background 0.15s",
-                          outline: editMode ? "none" : undefined,
                         }}
                         title={editMode ? "Clic para cambiar valor" : undefined}
                       >
-                        {code && (
-                          <span style={{ display: "inline-block", fontWeight: 500, fontSize: 11, color: c.text }}>
-                            {code}
-                          </span>
-                        )}
-                        {editMode && !code && (
-                          <span style={{ display: "inline-block", fontSize: 10, color: "#D1D5DB" }}>·</span>
-                        )}
+                        {code && <span style={{ display: "inline-block", fontWeight: 500, fontSize: 11, color: c.text }}>{code}</span>}
+                        {editMode && !code && <span style={{ display: "inline-block", fontSize: 10, color: "#D1D5DB" }}>·</span>}
                       </td>
                     );
                   })}
                 </tr>
               ));
-            })}
+            })()}
           </tbody>
         </table>
       </div>
