@@ -33,6 +33,7 @@ export default function RACIMatrixDetallada() {
   const [filterCat, setFilterCat] = useState("Todas");
   const [filterComp, setFilterComp] = useState("Todas");
   const [highlight, setHighlight] = useState(null);
+  const [highlightRow, setHighlightRow] = useState(null);
   const tableRef = useRef(null);
   const [editMode, setEditMode] = useState(false);
   const [editData, setEditData] = useState(null);
@@ -93,13 +94,13 @@ export default function RACIMatrixDetallada() {
   // ── Highlight lock (click to pin, Esc or click outside to clear) ────────
 
   useEffect(() => {
-    if (!highlight) return;
-    const handleKey = (e) => { if (e.key === "Escape") setHighlight(null); };
-    const handleClick = (e) => { if (tableRef.current && !tableRef.current.contains(e.target)) setHighlight(null); };
+    if (!highlight && !highlightRow) return;
+    const handleKey = (e) => { if (e.key === "Escape") { setHighlight(null); setHighlightRow(null); } };
+    const handleClick = (e) => { if (tableRef.current && !tableRef.current.contains(e.target)) { setHighlight(null); setHighlightRow(null); } };
     document.addEventListener("keydown", handleKey);
     document.addEventListener("mousedown", handleClick);
     return () => { document.removeEventListener("keydown", handleKey); document.removeEventListener("mousedown", handleClick); };
-  }, [highlight]);
+  }, [highlight, highlightRow]);
 
   // ── Edit mode ──────────────────────────────────────────────────────────────
 
@@ -350,8 +351,8 @@ export default function RACIMatrixDetallada() {
                           {cat}
                         </td>
                       ) : null}
-                      <td style={{ padding: "6px 6px", fontSize: 10, color: "var(--color-text-secondary)", lineHeight: 1.2 }}>{r.comp}</td>
-                      <td style={{ padding: "6px 6px", lineHeight: 1.3, fontSize: 11 }}>{r.actividad}</td>
+                      <td onClick={() => !editMode && setHighlightRow(highlightRow === r.actividad ? null : r.actividad)} style={{ padding: "6px 6px", fontSize: 10, color: "var(--color-text-secondary)", lineHeight: 1.2, cursor: editMode ? "default" : "pointer", background: highlightRow === r.actividad ? "var(--color-highlight-bg)" : "transparent", borderTop: highlightRow === r.actividad ? "2px solid var(--color-highlight)" : "none", borderBottom: highlightRow === r.actividad ? "2px solid var(--color-highlight)" : "none", borderLeft: highlightRow === r.actividad ? "2px solid var(--color-highlight)" : "none" }}>{r.comp}</td>
+                      <td onClick={() => !editMode && setHighlightRow(highlightRow === r.actividad ? null : r.actividad)} style={{ padding: "6px 6px", lineHeight: 1.3, fontSize: 11, cursor: editMode ? "default" : "pointer", background: highlightRow === r.actividad ? "var(--color-highlight-bg)" : "transparent", borderTop: highlightRow === r.actividad ? "2px solid var(--color-highlight)" : "none", borderBottom: highlightRow === r.actividad ? "2px solid var(--color-highlight)" : "none" }}>{r.actividad}</td>
                       {AREAS.map(a => {
                         const code = r.raci[a.id] || "";
                         const c = RACI_COLORS[code] || RACI_COLORS[""];
@@ -362,6 +363,8 @@ export default function RACIMatrixDetallada() {
                               textAlign: "center", padding: "4px 2px",
                               borderLeft: highlight === a.id ? "2px solid var(--color-highlight)" : "0.5px solid var(--color-border-tertiary)",
                               borderRight: highlight === a.id ? "2px solid var(--color-highlight)" : "none",
+                              borderTop: highlightRow === r.actividad ? "2px solid var(--color-highlight)" : "none",
+                              borderBottom: highlightRow === r.actividad ? "2px solid var(--color-highlight)" : "none",
                               background: code ? c.bg : "transparent",
                               cursor: editMode ? "pointer" : "default",
                             }}
@@ -391,8 +394,8 @@ export default function RACIMatrixDetallada() {
                   }}>
                     {r.cat}
                   </td>
-                  <td style={{ padding: "6px 6px", fontSize: 10, color: "var(--color-text-secondary)", lineHeight: 1.2 }}>{r.comp}</td>
-                  <td style={{ padding: "6px 6px", lineHeight: 1.3, fontSize: 11 }}>{r.actividad}</td>
+                  <td onClick={() => !editMode && setHighlightRow(highlightRow === r.actividad ? null : r.actividad)} style={{ padding: "6px 6px", fontSize: 10, color: "var(--color-text-secondary)", lineHeight: 1.2, cursor: editMode ? "default" : "pointer", background: highlightRow === r.actividad ? "var(--color-highlight-bg)" : "transparent", borderTop: highlightRow === r.actividad ? "2px solid var(--color-highlight)" : "none", borderBottom: highlightRow === r.actividad ? "2px solid var(--color-highlight)" : "none", borderLeft: highlightRow === r.actividad ? "2px solid var(--color-highlight)" : "none" }}>{r.comp}</td>
+                  <td onClick={() => !editMode && setHighlightRow(highlightRow === r.actividad ? null : r.actividad)} style={{ padding: "6px 6px", lineHeight: 1.3, fontSize: 11, cursor: editMode ? "default" : "pointer", background: highlightRow === r.actividad ? "var(--color-highlight-bg)" : "transparent", borderTop: highlightRow === r.actividad ? "2px solid var(--color-highlight)" : "none", borderBottom: highlightRow === r.actividad ? "2px solid var(--color-highlight)" : "none" }}>{r.actividad}</td>
                   {AREAS.map(a => {
                     const code = r.raci[a.id] || "";
                     const c = RACI_COLORS[code] || RACI_COLORS[""];
@@ -403,6 +406,8 @@ export default function RACIMatrixDetallada() {
                           textAlign: "center", padding: "4px 2px",
                           borderLeft: highlight === a.id ? "2px solid var(--color-highlight)" : "0.5px solid var(--color-border-tertiary)",
                           borderRight: highlight === a.id ? "2px solid var(--color-highlight)" : "none",
+                          borderTop: highlightRow === r.actividad ? "2px solid var(--color-highlight)" : "none",
+                          borderBottom: highlightRow === r.actividad ? "2px solid var(--color-highlight)" : "none",
                           background: code ? c.bg : "transparent",
                           cursor: editMode ? "pointer" : "default",
                         }}
