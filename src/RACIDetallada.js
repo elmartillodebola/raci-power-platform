@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import * as XLSX from "xlsx";
 import AREAS from "./data/areas.json";
 import RACI_DATA_RAW from "./data/raci-data.json";
@@ -33,6 +33,7 @@ export default function RACIMatrixDetallada() {
   const [filterCat, setFilterCat] = useState("Todas");
   const [filterComp, setFilterComp] = useState("Todas");
   const [highlight, setHighlight] = useState(null);
+  const tableRef = useRef(null);
   const [editMode, setEditMode] = useState(false);
   const [editData, setEditData] = useState(null);
   const [showSaveNotice, setShowSaveNotice] = useState(false);
@@ -88,6 +89,17 @@ export default function RACIMatrixDetallada() {
     setFilterCat(val);
     setFilterComp("Todas");
   };
+
+  // ── Highlight lock (click to pin, Esc or click outside to clear) ────────
+
+  useEffect(() => {
+    if (!highlight) return;
+    const handleKey = (e) => { if (e.key === "Escape") setHighlight(null); };
+    const handleClick = (e) => { if (tableRef.current && !tableRef.current.contains(e.target)) setHighlight(null); };
+    document.addEventListener("keydown", handleKey);
+    document.addEventListener("mousedown", handleClick);
+    return () => { document.removeEventListener("keydown", handleKey); document.removeEventListener("mousedown", handleClick); };
+  }, [highlight]);
 
   // ── Edit mode ──────────────────────────────────────────────────────────────
 
@@ -195,7 +207,7 @@ export default function RACIMatrixDetallada() {
       {editMode && (
         <div style={{
           marginBottom: "0.75rem", padding: "8px 14px", borderRadius: 8,
-          background: "#FFFBEB", border: "1px solid #F59E0B",
+          background: "var(--color-highlight-bg)", border: "1px solid var(--color-highlight)",
           display: "flex", alignItems: "center", gap: 10, fontSize: 12,
           color: "#92400E",
         }}>
@@ -223,7 +235,7 @@ export default function RACIMatrixDetallada() {
         </div>
         {!editMode && (
           <div style={{ fontSize: 12, color: "var(--color-text-secondary)" }}>
-            · Pasa el cursor sobre un área para destacarla
+            · Haz clic en el encabezado de un área para destacar la columna
           </div>
         )}
 
@@ -232,7 +244,7 @@ export default function RACIMatrixDetallada() {
             <>
               <button onClick={activateEdit} style={{
                 fontSize: 12, padding: "4px 12px", borderRadius: 6,
-                border: "0.5px solid #F59E0B", background: "#FFFBEB",
+                border: "0.5px solid var(--color-highlight)", background: "var(--color-highlight-bg)",
                 color: "#92400E", cursor: "pointer",
               }}>
                 ✎ Editar valores
@@ -269,9 +281,8 @@ export default function RACIMatrixDetallada() {
       </div>
 
       {/* Table */}
-      <div style={{
-        overflowX: "auto", borderRadius: 8,
-        border: editMode ? "1.5px solid #F59E0B" : "0.5px solid var(--color-border-tertiary)",
+      <div ref={tableRef} style={{
+        border: editMode ? "1.5px solid var(--color-highlight)" : "0.5px solid var(--color-border-tertiary)",
         transition: "border 0.2s",
       }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 11, tableLayout: "fixed" }}>
@@ -294,16 +305,16 @@ export default function RACIMatrixDetallada() {
               </th>
               {AREAS.map(a => (
                 <th key={a.id}
-                  onMouseEnter={() => !editMode && setHighlight(a.id)}
-                  onMouseLeave={() => setHighlight(null)}
+                  onClick={() => { if (!editMode) setHighlight(highlight === a.id ? null : a.id); }}
                   style={{
                     padding: "6px 2px", textAlign: "center", fontWeight: 500, fontSize: 9,
                     color: highlight === a.id ? "var(--color-text-primary)" : "var(--color-text-secondary)",
-                    cursor: "default",
-                    background: highlight === a.id ? "var(--color-background-info)" : "transparent",
-                    transition: "background 0.15s",
+                    cursor: editMode ? "default" : "pointer",
+                    background: highlight === a.id ? "var(--color-highlight-bg)" : "transparent",
                     whiteSpace: "normal", lineHeight: 1.2,
-                    borderLeft: "0.5px solid var(--color-border-tertiary)",
+                    borderLeft: highlight === a.id ? "2px solid var(--color-highlight)" : "0.5px solid var(--color-border-tertiary)",
+                    borderRight: highlight === a.id ? "2px solid var(--color-highlight)" : "none",
+                    borderBottom: highlight === a.id ? "2px solid var(--color-highlight)" : "none",
                   }}>
                   {a.short}
                 </th>
@@ -351,10 +362,10 @@ export default function RACIMatrixDetallada() {
                             onClick={() => editMode && cycleCell(r.actividad, a.id)}
                             style={{
                               textAlign: "center", padding: "4px 2px",
-                              borderLeft: "0.5px solid var(--color-border-tertiary)",
-                              background: highlight === a.id ? (code ? c.bg : "var(--color-background-info)") : (code ? c.bg : "transparent"),
+                              borderLeft: highlight === a.id ? "2px solid var(--color-highlight)" : "0.5px solid var(--color-border-tertiary)",
+                              borderRight: highlight === a.id ? "2px solid var(--color-highlight)" : "none",
+                              background: code ? c.bg : "transparent",
                               cursor: editMode ? "pointer" : "default",
-                              transition: "background 0.15s",
                             }}
                             title={editMode ? "Clic para cambiar valor" : undefined}
                           >
@@ -392,10 +403,10 @@ export default function RACIMatrixDetallada() {
                         onClick={() => editMode && cycleCell(r.actividad, a.id)}
                         style={{
                           textAlign: "center", padding: "4px 2px",
-                          borderLeft: "0.5px solid var(--color-border-tertiary)",
-                          background: highlight === a.id ? (code ? c.bg : "var(--color-background-info)") : (code ? c.bg : "transparent"),
+                          borderLeft: highlight === a.id ? "2px solid var(--color-highlight)" : "0.5px solid var(--color-border-tertiary)",
+                          borderRight: highlight === a.id ? "2px solid var(--color-highlight)" : "none",
+                          background: code ? c.bg : "transparent",
                           cursor: editMode ? "pointer" : "default",
-                          transition: "background 0.15s",
                         }}
                         title={editMode ? "Clic para cambiar valor" : undefined}
                       >

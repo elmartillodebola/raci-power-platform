@@ -10,6 +10,8 @@
   --color-border-secondary: rgba(0,0,0,0.25);
   --border-radius-md: 8px;
   --border-radius-lg: 12px;
+  --color-highlight: #F59E0B;
+  --color-highlight-bg: #FFFBEB;
 }
 body { margin: 0; font-family: var(--font-sans); }
 
