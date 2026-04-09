@@ -5,12 +5,12 @@
     "comp": "Gobierno",
     "raci": {
       "dev": "C",
-      "ai": "C",
-      "rpa": "C",
+      "ai": "I",
+      "rpa": "I",
       "datos": "C",
       "arq": "C",
       "ops": "AR",
-      "mesa": "I",
+      "mesa": "",
       "sec": "C",
       "proc": "",
       "sol": "R"
@@ -22,13 +22,13 @@
     "comp": "Gobierno",
     "raci": {
       "dev": "R",
-      "ai": "C",
-      "rpa": "R",
+      "ai": "",
+      "rpa": "",
       "datos": "C",
       "arq": "C",
       "ops": "",
       "mesa": "",
-      "sec": "C",
+      "sec": "",
       "proc": "I",
       "sol": "AR"
     }
@@ -42,12 +42,12 @@
       "ai": "AR",
       "rpa": "",
       "datos": "",
-      "arq": "I",
+      "arq": "C",
       "ops": "R",
-      "mesa": "I",
-      "sec": "I",
+      "mesa": "",
+      "sec": "C",
       "proc": "",
-      "sol": "I"
+      "sol": ""
     }
   },
   {
@@ -61,7 +61,7 @@
       "datos": "AR",
       "arq": "C",
       "ops": "C",
-      "mesa": "I",
+      "mesa": "",
       "sec": "C",
       "proc": "",
       "sol": "I"
@@ -72,16 +72,16 @@
     "cat": "Power Platform Admin & CoE",
     "comp": "Seguridad",
     "raci": {
-      "dev": "I",
-      "ai": "I",
-      "rpa": "I",
-      "datos": "I",
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
       "arq": "C",
       "ops": "R",
-      "mesa": "I",
+      "mesa": "",
       "sec": "A",
       "proc": "",
-      "sol": "I"
+      "sol": ""
     }
   },
   {
@@ -89,14 +89,14 @@
     "cat": "Power Platform Admin & CoE",
     "comp": "Operaciones",
     "raci": {
-      "dev": "",
+      "dev": "C",
       "ai": "",
       "rpa": "",
       "datos": "",
       "arq": "C",
       "ops": "AR",
       "mesa": "I",
-      "sec": "I",
+      "sec": "",
       "proc": "",
       "sol": ""
     }
@@ -113,7 +113,7 @@
       "arq": "C",
       "ops": "AR",
       "mesa": "I",
-      "sec": "C",
+      "sec": "",
       "proc": "",
       "sol": "C"
     }
@@ -140,16 +140,16 @@
     "cat": "Power Platform Admin & CoE",
     "comp": "Habilitación",
     "raci": {
-      "dev": "I",
-      "ai": "I",
-      "rpa": "I",
-      "datos": "I",
+      "dev": "",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
       "arq": "C",
-      "ops": "AR",
+      "ops": "I",
       "mesa": "I",
-      "sec": "C",
-      "proc": "I",
-      "sol": "C"
+      "sec": "",
+      "proc": "R",
+      "sol": "A"
     }
   },
   {
@@ -158,13 +158,13 @@
     "comp": "Habilitación",
     "raci": {
       "dev": "AR",
-      "ai": "I",
-      "rpa": "I",
-      "datos": "I",
-      "arq": "I",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
       "ops": "I",
       "mesa": "I",
-      "sec": "I",
+      "sec": "",
       "proc": "",
       "sol": "C"
     }
@@ -192,14 +192,14 @@
     "comp": "Desarrollo",
     "raci": {
       "dev": "AR",
-      "ai": "I",
-      "rpa": "I",
+      "ai": "",
+      "rpa": "",
       "datos": "R",
       "arq": "C",
       "ops": "",
-      "mesa": "C",
+      "mesa": "",
       "sec": "C",
-      "proc": "I",
+      "proc": "",
       "sol": "R"
     }
   },
@@ -214,9 +214,9 @@
       "datos": "",
       "arq": "A",
       "ops": "C",
-      "mesa": "I",
+      "mesa": "",
       "sec": "C",
-      "proc": "I",
+      "proc": "",
       "sol": "C"
     }
   },
@@ -226,14 +226,14 @@
     "comp": "Operaciones",
     "raci": {
       "dev": "C",
-      "ai": "C",
-      "rpa": "C",
-      "datos": "C",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
       "arq": "R",
       "ops": "R",
       "mesa": "I",
       "sec": "C",
-      "proc": "C",
+      "proc": "",
       "sol": "AR"
     }
   },
@@ -243,15 +243,15 @@
     "comp": "Soporte",
     "raci": {
       "dev": "C",
-      "ai": "C",
-      "rpa": "C",
+      "ai": "",
+      "rpa": "",
       "datos": "C",
-      "arq": "C",
-      "ops": "R",
-      "mesa": "R",
-      "sec": "C",
+      "arq": "",
+      "ops": "C",
+      "mesa": "AR",
+      "sec": "",
       "proc": "",
-      "sol": "A"
+      "sol": "C"
     }
   },
   {
@@ -260,14 +260,14 @@
     "comp": "Habilitación",
     "raci": {
       "dev": "AR",
-      "ai": "I",
-      "rpa": "I",
-      "datos": "I",
-      "arq": "I",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
+      "arq": "C",
       "ops": "I",
-      "mesa": "I",
-      "sec": "I",
-      "proc": "I",
+      "mesa": "",
+      "sec": "",
+      "proc": "",
       "sol": "C"
     }
   },
@@ -279,13 +279,13 @@
       "dev": "C",
       "ai": "I",
       "rpa": "AR",
-      "datos": "C",
+      "datos": "",
       "arq": "C",
       "ops": "I",
       "mesa": "",
       "sec": "C",
       "proc": "I",
-      "sol": "C"
+      "sol": ""
     }
   },
   {
@@ -299,9 +299,9 @@
       "datos": "C",
       "arq": "C",
       "ops": "",
-      "mesa": "C",
+      "mesa": "",
       "sec": "C",
-      "proc": "I",
+      "proc": "C",
       "sol": "AR"
     }
   },
@@ -316,9 +316,9 @@
       "datos": "C",
       "arq": "C",
       "ops": "",
-      "mesa": "C",
+      "mesa": "",
       "sec": "C",
-      "proc": "I",
+      "proc": "",
       "sol": "AR"
     }
   },
@@ -328,14 +328,14 @@
     "comp": "Integración",
     "raci": {
       "dev": "R",
-      "ai": "I",
-      "rpa": "I",
+      "ai": "",
+      "rpa": "",
       "datos": "C",
       "arq": "AR",
       "ops": "R",
-      "mesa": "I",
+      "mesa": "",
       "sec": "C",
-      "proc": "I",
+      "proc": "",
       "sol": "C"
     }
   },
@@ -345,15 +345,15 @@
     "comp": "Seguridad",
     "raci": {
       "dev": "",
-      "ai": "C",
-      "rpa": "C",
-      "datos": "C",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
       "arq": "C",
-      "ops": "AR",
+      "ops": "R",
       "mesa": "",
-      "sec": "I",
+      "sec": "A",
       "proc": "",
-      "sol": "C"
+      "sol": ""
     }
   },
   {
@@ -361,15 +361,15 @@
     "cat": "Power Automate",
     "comp": "Operaciones",
     "raci": {
-      "dev": "I",
-      "ai": "I",
-      "rpa": "I",
-      "datos": "I",
+      "dev": "C",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
       "arq": "C",
       "ops": "AR",
       "mesa": "I",
-      "sec": "I",
-      "proc": "I",
+      "sec": "",
+      "proc": "",
       "sol": "C"
     }
   },
@@ -378,14 +378,14 @@
     "cat": "Power BI",
     "comp": "Desarrollo",
     "raci": {
-      "dev": "R",
+      "dev": "C",
       "ai": "",
       "rpa": "",
       "datos": "AR",
       "arq": "C",
-      "ops": "I",
+      "ops": "",
       "mesa": "",
-      "sec": "I",
+      "sec": "C",
       "proc": "",
       "sol": "C"
     }
@@ -395,12 +395,12 @@
     "cat": "Power BI",
     "comp": "Seguridad",
     "raci": {
-      "dev": "R",
+      "dev": "",
       "ai": "",
       "rpa": "",
       "datos": "AR",
       "arq": "C",
-      "ops": "I",
+      "ops": "R",
       "mesa": "",
       "sec": "C",
       "proc": "",
@@ -438,7 +438,7 @@
       "mesa": "",
       "sec": "",
       "proc": "",
-      "sol": "I"
+      "sol": ""
     }
   },
   {
@@ -447,9 +447,9 @@
     "comp": "Gobierno",
     "raci": {
       "dev": "C",
-      "ai": "C",
-      "rpa": "C",
-      "datos": "C",
+      "ai": "",
+      "rpa": "",
+      "datos": "",
       "arq": "AR",
       "ops": "I",
       "mesa": "",
@@ -468,10 +468,10 @@
       "rpa": "",
       "datos": "",
       "arq": "A",
-      "ops": "I",
+      "ops": "",
       "mesa": "",
       "sec": "C",
-      "proc": "I",
+      "proc": "",
       "sol": "C"
     }
   },
@@ -489,7 +489,7 @@
       "mesa": "",
       "sec": "AR",
       "proc": "",
-      "sol": "I"
+      "sol": "C"
     }
   },
   {
@@ -505,7 +505,7 @@
       "ops": "AR",
       "mesa": "I",
       "sec": "C",
-      "proc": "I",
+      "proc": "",
       "sol": "R"
     }
   },
@@ -531,13 +531,13 @@
     "cat": "Dataverse",
     "comp": "Desarrollo",
     "raci": {
-      "dev": "I",
-      "ai": "I",
-      "rpa": "I",
+      "dev": "",
+      "ai": "",
+      "rpa": "",
       "datos": "AR",
       "arq": "R",
-      "ops": "C",
-      "mesa": "I",
+      "ops": "",
+      "mesa": "",
       "sec": "C",
       "proc": "",
       "sol": "C"
@@ -548,16 +548,16 @@
     "cat": "Dataverse",
     "comp": "Integración",
     "raci": {
-      "dev": "I",
+      "dev": "R",
       "ai": "",
       "rpa": "",
       "datos": "A",
       "arq": "R",
       "ops": "C",
       "mesa": "",
-      "sec": "I",
-      "proc": "I",
-      "sol": "I"
+      "sec": "C",
+      "proc": "",
+      "sol": ""
     }
   },
   {
@@ -584,14 +584,14 @@
     "raci": {
       "dev": "C",
       "ai": "",
-      "rpa": "I",
+      "rpa": "",
       "datos": "R",
       "arq": "C",
       "ops": "AR",
       "mesa": "I",
-      "sec": "I",
-      "proc": "I",
-      "sol": "I"
+      "sec": "",
+      "proc": "",
+      "sol": ""
     }
   },
   {
@@ -601,11 +601,11 @@
     "raci": {
       "dev": "C",
       "ai": "AR",
-      "rpa": "C",
-      "datos": "C",
+      "rpa": "",
+      "datos": "",
       "arq": "C",
       "ops": "R",
-      "mesa": "I",
+      "mesa": "",
       "sec": "C",
       "proc": "C",
       "sol": "C"
@@ -618,10 +618,10 @@
     "raci": {
       "dev": "R",
       "ai": "AR",
-      "rpa": "C",
+      "rpa": "",
       "datos": "",
       "arq": "R",
-      "ops": "I",
+      "ops": "",
       "mesa": "",
       "sec": "C",
       "proc": "",
@@ -638,10 +638,10 @@
       "rpa": "",
       "datos": "",
       "arq": "R",
-      "ops": "I",
+      "ops": "",
       "mesa": "",
       "sec": "C",
-      "proc": "I",
+      "proc": "",
       "sol": "C"
     }
   },
@@ -654,11 +654,11 @@
       "ai": "AR",
       "rpa": "",
       "datos": "",
-      "arq": "I",
+      "arq": "C",
       "ops": "R",
       "mesa": "I",
-      "sec": "I",
-      "proc": "I",
+      "sec": "",
+      "proc": "",
       "sol": "C"
     }
   },
@@ -669,11 +669,11 @@
     "raci": {
       "dev": "C",
       "ai": "AR",
-      "rpa": "C",
+      "rpa": "",
       "datos": "C",
       "arq": "C",
       "ops": "R",
-      "mesa": "I",
+      "mesa": "",
       "sec": "R",
       "proc": "R",
       "sol": "C"
@@ -685,14 +685,14 @@
     "comp": "Desarrollo",
     "raci": {
       "dev": "R",
-      "ai": "R",
-      "rpa": "I",
-      "datos": "A",
+      "ai": "A",
+      "rpa": "",
+      "datos": "C",
       "arq": "C",
-      "ops": "I",
-      "mesa": "I",
+      "ops": "",
+      "mesa": "",
       "sec": "C",
-      "proc": "I",
+      "proc": "",
       "sol": "C"
     }
   },
@@ -703,14 +703,14 @@
     "raci": {
       "dev": "R",
       "ai": "A",
-      "rpa": "I",
+      "rpa": "",
       "datos": "C",
       "arq": "C",
-      "ops": "I",
-      "mesa": "I",
+      "ops": "",
+      "mesa": "",
       "sec": "C",
-      "proc": "I",
-      "sol": "C"
+      "proc": "",
+      "sol": ""
     }
   },
   {
@@ -722,10 +722,10 @@
       "ai": "",
       "rpa": "",
       "datos": "",
-      "arq": "I",
-      "ops": "AR",
+      "arq": "C",
+      "ops": "R",
       "mesa": "",
-      "sec": "R",
+      "sec": "A",
       "proc": "",
       "sol": "C"
     }
@@ -743,7 +743,7 @@
       "ops": "AR",
       "mesa": "",
       "sec": "C",
-      "proc": "I",
+      "proc": "",
       "sol": "C"
     }
   }
