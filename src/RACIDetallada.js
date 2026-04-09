@@ -293,7 +293,7 @@ export default function RACIMatrixDetallada() {
             {AREAS.map(a => <col key={a.id} style={{ width: 52 }} />)}
           </colgroup>
           <thead>
-            <tr style={{ background: "var(--color-background-secondary)", borderBottom: "0.5px solid var(--color-border-secondary)" }}>
+            <tr style={{ background: "var(--color-background-secondary)", boxShadow: "0 0.5px var(--color-border-secondary)", position: "sticky", top: 0, zIndex: 2 }}>
               <th onClick={() => handleSort("cat")} style={{ padding: "8px 6px", textAlign: "left", fontWeight: 500, fontSize: 10, ...sortHeaderStyle("cat") }}>
                 Componente PP<span style={{ opacity: 0.6 }}>{sortIcon("cat")}</span>
               </th>
@@ -312,9 +312,7 @@ export default function RACIMatrixDetallada() {
                     cursor: editMode ? "default" : "pointer",
                     background: highlight === a.id ? "var(--color-highlight-bg)" : "transparent",
                     whiteSpace: "normal", lineHeight: 1.2,
-                    borderLeft: highlight === a.id ? "2px solid var(--color-highlight)" : "0.5px solid var(--color-border-tertiary)",
-                    borderRight: highlight === a.id ? "2px solid var(--color-highlight)" : "none",
-                    borderBottom: highlight === a.id ? "2px solid var(--color-highlight)" : "none",
+                    outline: highlight === a.id ? "2px solid var(--color-highlight)" : "none",
                   }}>
                   {a.short}
                 </th>
