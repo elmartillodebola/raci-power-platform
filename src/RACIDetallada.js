@@ -294,7 +294,7 @@ export default function RACIMatrixDetallada() {
             {AREAS.map(a => <col key={a.id} style={{ width: 52 }} />)}
           </colgroup>
           <thead>
-            <tr style={{ background: "var(--color-background-secondary)", boxShadow: "0 0.5px var(--color-border-secondary)", position: "sticky", top: 0, zIndex: 2 }}>
+            <tr style={{ background: "var(--color-background-secondary)", boxShadow: "0 1px var(--color-border-secondary)", position: "sticky", top: 0, zIndex: 2 }}>
               <th onClick={() => handleSort("cat")} style={{ padding: "8px 6px", textAlign: "left", fontWeight: 500, fontSize: 10, ...sortHeaderStyle("cat") }}>
                 Componente PP<span style={{ opacity: 0.6 }}>{sortIcon("cat")}</span>
               </th>
@@ -338,7 +338,7 @@ export default function RACIMatrixDetallada() {
                   rows.map((r, i) => (
                     <tr key={r.actividad} style={{
                       borderBottom: "0.5px solid var(--color-border-tertiary)",
-                      background: i % 2 === 0 ? "transparent" : "var(--color-background-secondary)",
+                      background: "transparent",
                     }}>
                       {i === 0 ? (
                         <td rowSpan={rows.length} style={{
