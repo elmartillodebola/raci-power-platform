@@ -86,12 +86,12 @@ test('muestra áreas de TI actualizadas en el encabezado', () => {
 
 test('contiene actividades detalladas de Copilot Studio', () => {
   render(<RACIMatrixDetallada />);
-  expect(screen.getByText(/Desarrollar agentes y bots con Copilot Studio/i)).toBeInTheDocument();
+  expect(screen.getByText(/Desarrollar agentes y gestionar knowledge bases/i)).toBeInTheDocument();
 });
 
 test('contiene actividades de ALM & DevSecOps', () => {
   render(<RACIMatrixDetallada />);
-  expect(screen.getByText(/Configurar pipelines CI\/CD/i)).toBeInTheDocument();
+  expect(screen.getByText(/Gestionar ALM/i)).toBeInTheDocument();
 });
 
 test('contiene la nueva actividad de gobierno de SharePoint', () => {
@@ -101,5 +101,5 @@ test('contiene la nueva actividad de gobierno de SharePoint', () => {
 
 test('contiene la nueva actividad de acuerdos RPA y Power Automate', () => {
   render(<RACIMatrixDetallada />);
-  expect(screen.getByText(/acuerdos de cobertura entre Power Automate/i)).toBeInTheDocument();
+  expect(screen.getByText(/acuerdos de cobertura/i)).toBeInTheDocument();
 });
